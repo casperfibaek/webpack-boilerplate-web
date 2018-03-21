@@ -6,6 +6,7 @@ module.exports = {
         "commonjs": true
     },
     "rules": {
-        "indent": ["error", 4]
+        "indent": ["error", 4],
+        "no-console": 'off',
     }
 };

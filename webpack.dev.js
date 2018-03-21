@@ -19,12 +19,10 @@ module.exports = merge(common, {
             {
                 test: /\.(png|jpg|gif)$/,
                 include: path.resolve(__dirname, 'src'),
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {},
-                    },
-                ],
+                use: [{
+                    loader: 'file-loader',
+                    options: {},
+                }],
             },
         ],
     },

@@ -7,16 +7,14 @@ module.exports = {
         app: './src/index.js',
     },
     plugins: [
-        new CopyWebpackPlugin([
-            {
-                context: path.join(__dirname, 'src'),
-                from: './static',
-                to: '../dist/static',
-            },
-        ]),
+        new CopyWebpackPlugin([{
+            context: path.join(__dirname, 'src'),
+            from: './static',
+            to: '../dist/static',
+        }]),
         new HtmlWebpackPlugin({
-            title: 'Boilerplate CFI',
-            // favicon: './dist/static/favicon.ico'
+            template: path.join(__dirname, 'src/index.html'),
+            favicon: path.join(__dirname, 'src/favicon.ico'),
         }),
     ],
     output: {

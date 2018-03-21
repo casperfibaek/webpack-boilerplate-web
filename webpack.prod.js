@@ -33,7 +33,17 @@ module.exports = merge(common, {
                 include: path.resolve(__dirname, 'src'),
                 loader: 'babel-loader',
                 options: {
-                    presets: ['@babel/preset-env'],
+                    presets: [
+                        [
+                            '@babel/env',
+                            {
+                                browsers: [
+                                    'ie >= 10',
+                                ],
+                                modules: false,
+                            },
+                        ],
+                    ],
                 },
             },
         ],
