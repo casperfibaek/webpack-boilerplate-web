@@ -24,7 +24,10 @@ module.exports = merge(common, {
                 use: [
                     {
                         loader: 'file-loader',
-                        options: {},
+                        options: {
+                            useRelativePath: true,
+                            name: '[name].[ext]',
+                        },
                     },
                 ],
             },
