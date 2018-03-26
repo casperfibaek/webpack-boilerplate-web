@@ -32,19 +32,6 @@ module.exports = merge(common, {
                 test: /\.js$/,
                 include: path.resolve(__dirname, 'src'),
                 loader: 'babel-loader',
-                options: {
-                    presets: [
-                        [
-                            '@babel/env',
-                            {
-                                browsers: [
-                                    'ie >= 10',
-                                ],
-                                modules: false,
-                            },
-                        ],
-                    ],
-                },
             },
         ],
     },

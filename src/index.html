@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Casper Casper</title>
-  <body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Boilerplate</title>
+        <script>
+            (function(d, w) {
+                function s(d, w){ if (w.init) { w.init(); } else { w.initialize = true; } }
+                var f = ['default', 'fetch', 'Object.entries'];
+                if (!w.fetch || !Object.entries) {
+                    console.log('Loading polyfills..');
+                    var p = d.createElement('script');
+                    var u = 'https://cdn.polyfill.io/v2/polyfill.js?features=' + f.toString();
+                    p.src = u; p.type = 'text/javascript';
+                    p.onload = function() { s(d, w); }
+                    d.head.appendChild(p);
+                } else {
+                    s(d, w);
+                }
+            })(document, window);
+        </script>
+    </head>
+    <body>
+    </body>
 </html>

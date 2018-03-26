@@ -3,9 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line
 const CopyWebpackPlugin = require('copy-webpack-plugin'); // eslint-disable-line
 
 module.exports = {
-    entry: {
-        app: './src/index.js',
-    },
+    entry: [
+        './src/index.js',
+    ],
     plugins: [
         new CopyWebpackPlugin([{
             context: path.join(__dirname, 'src'),
@@ -19,7 +19,7 @@ module.exports = {
         }),
     ],
     output: {
-        filename: '[name].bundle.js',
+        filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
     },
 };
